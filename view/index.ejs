@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Timeline</title>
+</head>
+<body>
+    <form action="/create-post" method="post">
+        <input type="email" name="email" placeholder="write your email ">
+        <input type="type" name = "title" placeholder="post title">
+        <textarea name="desc" placeholder="Your opinion "></textarea>
+        <button>post</button>
+    </form>
+
+    <% for (let i = 0; i < array.length; index++) { %>
+            <div>
+                <h1>Title is: <%= post[i].title %></h1>
+                <p>content: <%=  post[i].desc %></p>
+                <h3>posted By: <%= post[i].email%></h3>
+               <span><%= posts[i].created_at %></span>
+
+               <form action="/delete-post<% posts._id %>" method="post">
+                        <button>delete</button>
+               </form>
+
+            </div>
+   <% } %>
+    
+</body>
+</html>
